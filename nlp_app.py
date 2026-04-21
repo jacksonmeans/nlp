@@ -1,6 +1,7 @@
 # Streamlit Libraries
 import streamlit as st
 # NLP Libraries
+import nltk
 from nltk.stem.wordnet import WordNetLemmatizer
 from textblob import TextBlob
 import re
