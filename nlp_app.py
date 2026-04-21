@@ -20,17 +20,17 @@ if st.button('Analyze'):
   text = text.split()
   # Lemmatizer
   lemmatizer = WordNetLemmatizer()
-  lemmatized_words = [lemmatizer.lemmatize(______) for word in text]
-  text = " ".join(_________)
+  lemmatized_words = [lemmatizer.lemmatize(text) for word in text]
+  text = " ".join(lemmatized_words)
   blob = TextBlob(text)
   sentiment_score = blob.sentiment.polarity
   if result > 0:
       custom_emoji = ':blush:'
-      st.success('Happy : {}'.format(______))
+      st.success('Happy : {}'.format(custom_emoji))
   elif result < 0:
       custom_emoji = ':disappointed:'
-      st.warning('Sad : {}'.format(_____))
+      st.warning('Sad : {}'.format(custom_emoji))
   else:
       custom_emoji = ':confused:'
-      st.info('Confused : {}'.format(_____))
+      st.info('Confused : {}'.format(custom_emoji))
   st.success("Polarity Score is: {}".format(result))
