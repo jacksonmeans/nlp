@@ -2,6 +2,7 @@
 import streamlit as st
 # NLP Libraries
 import nltk
+nltk.download('wordnet')
 from nltk.stem.wordnet import WordNetLemmatizer
 from textblob import TextBlob
 import re
