@@ -7,7 +7,7 @@ from textblob import TextBlob
 import re
 
 st.title('Sentiment Predictor')
-st.text_area('Input text')
+text = st.text_area('Input text')
 if st.button('Analyze'):
   #Keeping only Text and digits
   text = re.sub(r"[^A-Za-z0-9]", " ", text)
