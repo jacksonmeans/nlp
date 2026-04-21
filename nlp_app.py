@@ -22,7 +22,7 @@ if st.button('Analyze'):
   text = text.split()
   # Lemmatizer
   lemmatizer = WordNetLemmatizer()
-  lemmatized_words = [lemmatizer.lemmatize(text) for word in text]
+  lemmatized_words = [lemmatizer.lemmatize(word) for word in text]
   text = " ".join(lemmatized_words)
   blob = TextBlob(text)
   sentiment_score = blob.sentiment.polarity
