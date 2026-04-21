@@ -35,4 +35,4 @@ if st.button('Analyze'):
   else:
       custom_emoji = ':confused:'
       st.info('Confused : {}'.format(custom_emoji))
-  st.success("Polarity Score is: {}".format(result))
+  st.success("Polarity Score is: {}".format(sentiment_score))
