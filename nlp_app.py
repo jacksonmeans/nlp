@@ -26,10 +26,10 @@ if st.button('Analyze'):
   text = " ".join(lemmatized_words)
   blob = TextBlob(text)
   sentiment_score = blob.sentiment.polarity
-  if result > 0:
+  if sentiment_score > 0:
       custom_emoji = ':blush:'
       st.success('Happy : {}'.format(custom_emoji))
-  elif result < 0:
+  elif sentiment_score < 0:
       custom_emoji = ':disappointed:'
       st.warning('Sad : {}'.format(custom_emoji))
   else:
